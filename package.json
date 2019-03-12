@@ -1,0 +1,11 @@
+{
+  "name": "smartshift",
+  "version": "1.0.0",
+  "description": "**A flexible one-page fully responsive HTML template for your app**",
+  "main": "dashboard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

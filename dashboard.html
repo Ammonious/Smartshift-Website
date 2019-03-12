@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- META TAGS 
+        ================================================== -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      
+      <!-- SCRIPTS 
+        ================================================== -->
+       
+            <script src="js/jquery-1.12.0.min.js"></script>
+            <script src="js/parse-1.6.14.min.js"></script>
+            <script src="js/dashboard.js"></script>
+            
+      
+      <!-- POLYMER 
+        ================================================== -->
+       <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+        <link rel="import" href="bower_components/iron-icon/iron-icon.html">
+        <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
+        <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+        <link rel="import" href="bower_components/paper-material/paper-material.html">
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+        <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/iron-list/iron-list.html">
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+        <link rel="import" href="bower_components/paper-button/paper-button.html">
+        <link rel="import" href="bower_components/paper-item/paper-icon-item.html">
+        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+      
+      
+      <!-- CSS & GOOGLE FONTS 
+        ================================================== -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="css/dashboard.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+      
+  </head>
+        <body>
+        
+            
+          
+          
+           
+            
+            <!-- LEFT-NAVIGATION-DRAWER
+	      ================================================== -->
+        <paper-drawer-panel id="paperDrawerPanel">
+            <div drawer>
+                     <div id="drawer_title">
+                        <paper-icon-item id="title_item">
+                            <iron-icon icon="inbox" item-icon></iron-icon>Smart Shift Pro
+                        </paper-icon-item>
+                     </div>
+                     <paper-menu id="drawer_menu" selected="0" selectable="paper-icon-item" on-iron-activate="menuSelect" class="nav_item">
+                        <div class="list short" role="listbox" layout vertical>
+                        <div >    
+                            <paper-icon-item id="item_row" role="menuitem" class="nav_item">
+                                <iron-icon icon="dashboard" item-icon></iron-icon>Dashboard
+                            </paper-icon-item>
+                        </div>
+                        <paper-icon-item class="nav_item" >
+                            <iron-icon icon="mail" item-icon></iron-icon> Contact
+                        </paper-icon-item>
+                        <paper-icon-item id="howto" class="nav_item">
+                            <iron-icon icon="hardware:phone-iphone" item-icon></iron-icon> App How-to
+                        </paper-icon-item>
+                        </div>
+                    </paper-menu>
+            </div>
+                <div main>
+                    
+                       <!-- TOP NAVIGATION BAR
+                        ================================================== -->
+                    
+                  <paper-header-panel id="core_toolbar" mode="scroll" class="orange">
+                      <div layout horizontal>   
+                            <paper-button id="menu_button"><iron-icon icon="menu"></iron-icon></paper-button>
+                            <h1 id="core_title">Dashboard</h1>
+                      </div>   
+                </paper-header-panel>
+                    
+                    <!-- CONTENT AREA
+                        ================================================== -->
+                    <iron-pages id="pages" selected="0">
+                            <div>
+                    <paper-card id="core_card" layout vertical>
+                        <div id="schedule_title_div">
+                            <iron-icon id="schedule_icon" icon="update"></iron-icon>
+                            <h2>REALTIME CLOCK-INS</h2>
+                        </div>
+                        <div id="schedule_button_div">
+                            <paper-button id="schedule_button">SHOW MORE</paper-button>
+                        </div>
+                        <div>
+                            <ul style="list-style-type:none">
+                                <li class="pad">
+                                    <div id="schedule_title_div">
+                                        <div class="image_cover">
+                                            <img id="avatar_0" class="avatar">
+                                        </div>
+                                        <p id="name_0" class="employeeName">name</p>
+                                        <p id="employer_0" class="employerName">employer</p>
+                                        <p id="clockIn_0" class="clockInTime">time</p>
+                                    </div>
+                                </li>
+                                <li class="pad">
+                                    <div id="schedule_title_div">
+                                        <div class="image_cover">
+                                            <img id="avatar_1" class="avatar">
+                                        </div>
+                                        <p id="name_1" class="employeeName">name</p>
+                                        <p id="employer_1" class="employerName">employer</p>
+                                        <p id="clockIn_1" class="clockInTime">time</p>
+                                    </div>
+                                </li>
+                                <li class="pad">
+                                    <div id="schedule_title_div">
+                                        <div class="image_cover">
+                                            <img id="avatar_2" class="avatar">
+                                        </div>
+                                        <p id="name_2" class="employeeName">name</p>
+                                        <p id="employer_2" class="employerName">employer</p>
+                                        <p id="clockIn_2" class="clockInTime">time</p>
+                                    </div>
+                                </li>
+                                <li class="pad">
+                                    <div id="schedule_title_div">
+                                        <div class="image_cover">
+                                            <img id="avatar_3" class="avatar" >
+                                        </div>
+                                        <p id="name_3" class="employeeName">name</p>
+                                        <p id="employer_3" class="employerName">employer</p>
+                                        <p id="clockIn_3" class="clockInTime">time</p>
+                                    </div>
+                                </li>
+                                <li class="pad">
+                                    <div id="schedule_title_div">
+                                        <div class="image_cover">
+                                            <img id="avatar_4" class="avatar">
+                                        </div>
+                                        <p id="name_4" class="employeeName">name</p>
+                                        <p id="employer_4" class="employerName">employer</p>
+                                        <p id="clockIn_4" class="clockInTime">time</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                    </paper-card>
+                        </div>
+                        
+                        <div>
+                        </div>
+                        
+                        <div>
+                            <object type="text/html" data="howto.html">
+                            </object>
+                        </div>
+                    </iron-pages>
+                    
+                </div>
+                
+            </paper-drawer-panel>
+        
+            
+            <!-- SCHEDULED EMPLOYEE CARD
+	      ================================================== -->
+    
+            
+            
+            
+            
+            <!-- SCRIPTS
+	       ================================================== --> 
+           <script>
+                var pages = document.querySelector("#pages");
+                var howto = document.querySelector("#howto");
+                var dashboard = document.querySelector("#item_row");
+                howto.addEventListener("click", function(){
+                pages.selected = 2;
+                });
+               dashboard.addEventListener("click", function(){
+                pages.selected = 0;
+               });
+        </script>
+        </body>
+    
+</html>
